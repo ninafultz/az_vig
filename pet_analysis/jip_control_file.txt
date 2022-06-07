@@ -1,0 +1,8 @@
+time-model SRTM                          # this lets the program know how to interpret subsequent lines
+reference-region cerebellum_mask_in_dynamic_space.txt   # reference region for SRTM
+target-region putamen_mask_in_dynamic_space.txt     # target region for example analysis
+half-life 20.33                                  # half-life in minutes for the PET tracer (11-C here)
+output-format nifti                               # default output-format is NIFTI
+conditions 1 a A                               # conditions for statistics and parameter evaluation
+runs:                                    # this indicates that following lines will list runs (or use “files:”)
+DYNAMIC_PRR_AC_Images_mc.nii /ad/eng/research/eng_research_lewislab/users/nfultz/pet_eeg_fmri/glm/pet.glm  /ad/eng/research/eng_research_lewislab/users/nfultz/pet_eeg_fmri/time/pet-timing.table

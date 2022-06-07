@@ -1,0 +1,15 @@
+putamen putamen_mask_in_dynamic_space.txt red
+thalamus thalamus_mask_in_dynamic_space.txt blue
+caudate caudate_mask_in_dynamic_space.txt red
+amygdala amygdala_mask_in_dynamic_space.txt yellow
+brainstem brainstem_mask_in_dynamic_space.txt yellow
+midbrain midbrain_mask_in_dynamic_space.txt yellow
+medulla medulla_mask_in_dynamic_space.txt yellow
+pons pons_mask_in_dynamic_space.txt yellow
+SCP SCP_mask_in_dynamic_space.txt yellow
+cerebral_cortex cerebral_cortex_mask_in_dynamic_space.txt yellow
+ACC ACC_mask_in_dynamic_space.txt yellow
+cingulate cingulate_cortex_mask_in_dynamic_space.txt yellow
+occipital occipital_cortex_mask_in_dynamic_space.txt yellow
+raphe_nuclei raphe_nuclei_mask_in_dynamic_space.txt yellow
+cerebellum cerebellum_mask_in_dynamic_space.txt yellow
