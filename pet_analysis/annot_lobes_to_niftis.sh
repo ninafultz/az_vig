@@ -1,6 +1,6 @@
 #!/bin/bash                                                                                               
 
-# how to write it out: ./annot_lobes_to_niftis.sh -n az127 -d //data1/ninafultz/az_vig
+# how to write it out: ./annot_lobes_to_niftis.sh -n az127 -d $PROJ_PATH
 # nina fultz may 2021
 
 #gets displayed when -h or --help is put in
