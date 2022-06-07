@@ -1,6 +1,6 @@
 #!/bin/bash                                                                                               
 
-# how to write it out: ./registration.sh -n inkref_07_cap -d /ad/eng/research/eng_research_lewislab/users/nfultz/inknet -i image name
+# how to write it out: ./registration.sh -n inkref_07_cap -d  -i image name
 # nina fultz may 2022
 
 #gets displayed when -h or --help is put in
