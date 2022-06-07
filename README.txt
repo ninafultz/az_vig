@@ -8,6 +8,7 @@
 # 4) register PET image with anatomical
 # 5) motion correction
 # 6) jip kinetic modelling
+# 7) asl analysis
 
 #define
 PROJ_PATH=
