@@ -2,8 +2,8 @@
     %usage: assess whether srtm3 can handle shorter time frames
     %nina fultz 2022
 
-subj_control = 'az131'
-subj = 'az127'
+subj_control = ''
+subj = ''
 
 roi='raphe_nuclei'
 
@@ -15,7 +15,7 @@ x = reordercats(x,{'control', 'vigilance'})
 
 %% setting parent directory
 
-path = '//data1/ninafultz/az_vig'
+path = ''
 addpath(genpath(pwd)) %adding current path and subfolders
 
 matrix_control = []
@@ -89,26 +89,3 @@ for i=1:length(srtm2_types)
  
 
 end
-
-% 
-% %figure; hold on
-% for i=1:length(subjs)
-%     %hold on 
-%     subplot(4,1,)
-%     plot([1 2], [percent_change_control(i) percent_change(i)]); hold on
-%     scatter([1 2], [percent_change_control(i) percent_change(i)])
-%     hold on
-%     
-%     title(['BPND of ' roi ' comparing SRTM '], 'Interpreter', 'none'); hold on;
-%        %title((roi) 'BPND Percent Change');
-%    ax = gca;
-%    ax.XTick = [1,2];
-%    ax.XTickLabels = {'Control', 'Vigilance'}
-%    ylabel('% BPND Change')
-%    xlim([0.5, 2.5 ])
-%    ylim([5, 11])
-%  legend([srtm2_type])
-%      set(gcf, 'color', 'w');
-% 
-% 
-% end
