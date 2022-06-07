@@ -20,10 +20,10 @@ az_moving_files.sh
 # 2) unpacking, recon all, brainstem recon, gtmseg
 
 #dicom unpacking
-parallel ./get_data.sh -n dicoms -d /users/ninafultz/az_vig/{} -s dcm2niix ::: $SUBJECT_LIST
+parallel ./get_data.sh -n dicoms -d $PROJ_PATH/{} -s dcm2niix ::: $SUBJECT_LIST
 
 #recon all 
-parallel SUBJECTS_DIR=//data1/ninafultz/az_vig/{} recon-all -all -subj fs -parallel -i $PROJ_PATH/{}/anat/Head_t1_mprage_sag_p2_iso.nii.gz ::: $SUBJECT_LIST
+parallel SUBJECTS_DIR=$PROJ_PATH/{} recon-all -all -subj fs -parallel -i $PROJ_PATH/{}/anat/Head_t1_mprage_sag_p2_iso.nii.gz ::: $SUBJECT_LIST
 for SUBJECT in *; 
 do if [[ -f $SUBJECT/fs/scripts/recon-all.error ]]; 
 then echo "$SUBJECT recon-all.error exists on your filesystem."; fi; done
@@ -57,13 +57,13 @@ matlab -nodisplay -r "voxel_to_xyz_all_rois_dynamic_space('$SUBJECT')"
 done
 
 #6) formatting and moving files into a fastmap folder
-parallel ./fastmap_organizing -n {} -d $PROJ_PATH -s $SCRIPTS ::: $SUBJECT_LIST #automate this more
+parallel ./fastmap_organizing -n {} -d $PROJ_PATH -s $SCRIPTS ::: $SUBJECT_LIST 
 
-#7) displaying results (in jip_km folder): make sure to have source /usr/pubsw/packages/jip/define-jip.bash added to your .bashrc file --- MAKE SURE TO RESTART WHEN YOU DO THIS. ALSO THIS FILE WILL INTERACT BADLY WITH OTHER THINGS LIKE RSYNC SO HAVE AN ENVIRONMENT YOU RUN THIS IN 
+#7) displaying results (in jip_km folder): make sure to have source define-jip.bash added to your .bashrc file --- MAKE SURE TO RESTART WHEN YOU DO THIS. ALSO THIS FILE WILL INTERACT BADLY WITH OTHER THINGS LIKE RSYNC SO HAVE AN ENVIRONMENT YOU RUN THIS IN 
 
 $JIP_PATH NP3-kontrol.nii.gz_mc.nii -o overlay-list.txt 
 
-#8) save out ROI as individual file (press big R in jip-display GUI) #should automate this but idk right now
+#8) save out ROI as individual file (press big R in jip-display GUI)
         #EXTRACTING INFORMATION:
         #right click, can take out all curves , and extract text file
 
