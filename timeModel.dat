@@ -1,5 +1,0 @@
-time-model SRTM
-reference-region cerebellum
-smoothing-scale 0.5
-scans:
-NP3-kontrol.nii.gz_mc.nii pet.glm pet-timing.table
